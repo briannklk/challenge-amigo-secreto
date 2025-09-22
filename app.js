@@ -8,7 +8,7 @@ function agregarAmigo() {
 
   const nombre = input.value.trim();
   if (nombre === "") {
-    alert("Por favor, inserte un nombre");
+    alert("Por favor, inserte un nombre🙄");
     return;
   }
 
@@ -49,6 +49,6 @@ function sortearAmigo() {
   const indice = Math.floor(Math.random() * amigos.length);
   const ganador = amigos[indice];
   const res = document.getElementById("resultado");
-  if (res) res.textContent = `El amigo secreto es... ${ganador}`;
+  if (res) res.textContent = `El amigo secreto es... 🎉${ganador}🎉`;
   else console.log("Resultado:", ganador);
 }
