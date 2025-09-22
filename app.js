@@ -19,3 +19,23 @@ function agregarAmigo() {
   console.log("amigos:", amigos);
 }
 
+// muestra la lista (dificil)
+function actualizarLista() {
+  let lista = document.getElementById("listaAmigos");
+
+  if (!lista) {
+    const input = document.getElementById('amigo');
+    if (!input) { console.error("No puedo crear la lista porque faltan amigos"); return; }
+    lista = document.createElement('ul');
+    lista.id = "listaAmigos";
+    input.parentNode.insertBefore(lista, input.nextSibling);
+    console.log(`Se creó <ul id="listaAmigos"> automáticamente`);
+  }
+
+  lista.innerHTML = "";
+  for (let i = 0; i < amigos.length; i++) {
+    const li = document.createElement("li");
+    li.textContent = amigos[i];
+    lista.appendChild(li);
+  }
+}
