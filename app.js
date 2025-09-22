@@ -39,3 +39,16 @@ function actualizarLista() {
     lista.appendChild(li);
   }
 }
+
+// sorteo de los nombre ingfresados
+function sortearAmigo() {
+  if (amigos.length === 0) {
+    alert("No hay nombres en la lista!");
+    return;
+  }
+  const indice = Math.floor(Math.random() * amigos.length);
+  const ganador = amigos[indice];
+  const res = document.getElementById("resultado");
+  if (res) res.textContent = `El amigo secreto es... ${ganador}`;
+  else console.log("Resultado:", ganador);
+}
