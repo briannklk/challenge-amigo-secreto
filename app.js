@@ -17,3 +17,15 @@ input.value = "";
 input.focus();
 actualizarLista();
 
+//mostrar lista (lo mas dificil) 
+function actualizarLista() {
+    const lista = document.getElementById("listaAmigos");
+    lista.innerHTML = "";
+    for (let i = 0; i < amigos.length; i++) {
+        const li = document.getElementById("li");
+        li.textContent = amigos[i];
+        lista.appendChild(li);
+    }
+} 
+
+// sorteo del amigo secereto al azar
